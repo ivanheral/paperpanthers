@@ -19,18 +19,30 @@
  * @package WordPress
  */
 
-// ** Database settings - You can get this info from your web host ** //
+// ** Database settings - You can get this info from your web host or environment ** //
+if ( file_exists( __DIR__ . '/wp-config-local.php' ) ) {
+	include_once __DIR__ . '/wp-config-local.php';
+}
+
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'misitio_db' );
+if ( ! defined( 'DB_NAME' ) ) {
+	define( 'DB_NAME', getenv( 'DB_NAME' ) ?: 'misitio_db' );
+}
 
 /** Database username */
-define( 'DB_USER', 'admin' );
+if ( ! defined( 'DB_USER' ) ) {
+	define( 'DB_USER', getenv( 'DB_USER' ) ?: 'admin' );
+}
 
 /** Database password */
-define( 'DB_PASSWORD', 'secreto123' );
+if ( ! defined( 'DB_PASSWORD' ) ) {
+	define( 'DB_PASSWORD', getenv( 'DB_PASSWORD' ) ?: 'secreto123' );
+}
 
 /** Database hostname */
-define( 'DB_HOST', 'localhost' );
+if ( ! defined( 'DB_HOST' ) ) {
+	define( 'DB_HOST', getenv( 'DB_HOST' ) ?: 'localhost' );
+}
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );

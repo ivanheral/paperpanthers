@@ -4,8 +4,11 @@
 
 # Archivos de configuración local con credenciales
 wp-config-local.php
+user.txt
+*.xml
 
 # Backups y volcados de Base de Datos
+backups/
 *.sql
 *.sql.gz
 *.tar.gz

@@ -1,0 +1,33 @@
+<!-- wp:template-part {"slug":"header","area":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"pp-main pp-container","layout":{"type":"constrained"}} -->
+<main class="wp-block-group pp-main pp-container">
+	<article class="pp-article">
+		<header class="pp-article-header">
+			<!-- wp:post-terms {"term":"category","className":"pp-article-category"} /-->
+			<!-- wp:post-title {"level":1,"className":"pp-article-title"} /-->
+			<div class="pp-article-meta">
+				<!-- wp:post-author {"showAvatar":false,"showBio":false} /-->
+				<!-- wp:post-date /-->
+			</div>
+		</header>
+
+		<!-- wp:post-featured-image {"align":"wide","style":{"spacing":{"margin":{"bottom":"30px"}}}} /-->
+
+		<div class="pp-article-content">
+			<!-- wp:post-content {"layout":{"type":"constrained"}} /-->
+		</div>
+
+		<nav class="pp-article-nav" style="display: flex; justify-content: space-between; margin-top: 40px; border-top: 2px solid var(--pp-black); padding-top: 20px; font-weight: 800; font-size: 13px; text-transform: uppercase;">
+			<div>
+				<!-- wp:post-navigation-link {"type":"previous","label":"← <span data-lang=\"es\">Historia anterior</span><span data-lang=\"en\">Previous Story</span>"} /-->
+			</div>
+			<div>
+				<!-- wp:post-navigation-link {"type":"next","label":"<span data-lang=\"es\">Siguiente historia</span><span data-lang=\"en\">Next Story</span> →"} /-->
+			</div>
+		</nav>
+	</article>
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
