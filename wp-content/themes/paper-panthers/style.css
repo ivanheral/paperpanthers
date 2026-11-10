@@ -1,9 +1,8 @@
 /*
 Theme Name: Paper Panthers
 Theme URI: https://paperpanthers.org
-Description: Bilingual independent journalism theme for Paper Panthers. Child theme of Twenty Twenty-Five inspired by the founding Brandbook and Web prototype.
+Description: Standalone bilingual independent journalism block theme for Paper Panthers, inspired by the founding Brandbook and Web prototype.
 Author: Paper Panthers Newsroom
-Template: twentytwentyfive
 Version: 1.0.0
 Requires at least: 6.7
 Tested up to: 7.2
@@ -614,6 +613,18 @@ body.en i[data-lang="en"] {
 }
 
 /* Post loop cards & Grid Adaptations */
+.pp-latest-stories-section .wp-block-post-template.is-layout-grid {
+	grid-auto-rows: 1fr;
+	align-items: stretch;
+}
+
+.pp-latest-stories-section .pp-post-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	box-sizing: border-box;
+}
+
 .pp-post-card {
 	border: 2px solid var(--pp-black);
 	padding: clamp(18px, 4vw, 26px);
@@ -654,5 +665,9 @@ body.en i[data-lang="en"] {
 @media (max-width: 640px) {
 	.wp-block-post-template.is-layout-grid {
 		grid-template-columns: 1fr !important;
+	}
+
+	.pp-latest-stories-section .wp-block-post-template.is-layout-grid {
+		grid-auto-rows: auto;
 	}
 }

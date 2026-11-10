@@ -16,7 +16,7 @@
 
 	<!-- wp:query {"queryId":1,"query":{"perPage":6,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"layout":{"type":"default"}} -->
 	<div class="wp-block-query">
-		<!-- wp:post-template {"layout":{"type":"grid","columnFields":2}} -->
+		<!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
 			<!-- wp:group {"className":"pp-post-card","layout":{"type":"default"}} -->
 			<article class="pp-post-card">
 				<!-- wp:post-terms {"term":"category","className":"pp-post-category"} /-->

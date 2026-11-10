@@ -36,7 +36,7 @@ if ( ! defined( 'DB_USER' ) ) {
 
 /** Database password */
 if ( ! defined( 'DB_PASSWORD' ) ) {
-	define( 'DB_PASSWORD', getenv( 'DB_PASSWORD' ) ?: 'secreto123' );
+	define( 'DB_PASSWORD', 'secret123' );
 }
 
 /** Database hostname */

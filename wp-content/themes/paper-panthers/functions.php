@@ -13,19 +13,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Enqueue styles and scripts.
  */
 function paper_panthers_enqueue_assets() {
-	// Parent theme stylesheet
-	wp_enqueue_style(
-		'twentytwentyfive-parent-style',
-		get_template_directory_uri() . '/style.css',
-		array(),
-		wp_get_theme( 'twentytwentyfive' )->get( 'Version' )
-	);
-
-	// Child theme stylesheet
 	wp_enqueue_style(
 		'paper-panthers-style',
 		get_stylesheet_directory_uri() . '/style.css',
-		array( 'twentytwentyfive-parent-style' ),
+		array(),
 		wp_get_theme()->get( 'Version' )
 	);
 
